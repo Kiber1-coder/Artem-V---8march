@@ -1,0 +1,118 @@
+/* Общие настройки страницы */
+body {
+  margin: 0;
+  padding: 0;
+  /* Нежный весенний градиент на фоне */
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  background-color: #ffe6e9; /* Запасной цвет */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #4a4a4a;
+}
+
+/* Контейнер для центрирования открытки */
+.card-container {
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out; /* Анимация появления */
+}
+
+/* Сама открытка */
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px; /* Максимальная ширина */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(219, 112, 147, 0.3); /* Розовая тень */
+  text-align: center;
+  border: 2px solid #fff0f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративные элементы (цветочки сверху и снизу) */
+.decoration-top,
+.decoration-bottom {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Заголовок */
+h1 {
+  font-family: "Great Vibes", cursive; /* Рукописный шрифт */
+  color: #d63384; /* Ярко-розовый */
+  font-size: 3.5rem;
+  margin: 10px 0 20px 0;
+  line-height: 1.2;
+}
+
+/* Рамка для картинки */
+.photo-frame {
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Делает картинку круглой */
+  overflow: hidden;
+  border: 5px solid #ffc2d1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #eee; /* Цвет, если картинки нет */
+}
+
+/* Настройки самой картинки */
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Чтобы картинка красиво заполнила круг */
+  transition: transform 0.5s ease;
+}
+
+/* Эффект при наведении на картинку */
+.photo-frame:hover img {
+  transform: scale(1.1);
+}
+
+/* Текст поздравления */
+.greeting-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Подпись */
+.signature {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: #d63384;
+  margin-top: 20px;
+}
+
+/* Анимация плавного появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .card {
+    padding: 25px;
+  }
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+  }
+}
